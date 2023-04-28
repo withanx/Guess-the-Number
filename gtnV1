@@ -1,0 +1,90 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int loop;
+int main()
+{
+    int y;
+    int r;
+    int n;
+    int answer;
+    y=1;
+    n=2;
+    r=3;
+
+    int score=1;
+
+    string name;
+
+    cout << "｡ₓ ू ₒ GUESS THE NUMBER! ｡ ू ₒ ु\n ";
+    cout << "1 if you want to play and 2 if u dont\n";
+    cin>>answer;
+
+        if (answer == 2){
+        cout<<"LOSER";
+        return 0;}
+
+    while (y == 1 ) {
+
+    int i,random,tries;//sets all variables
+
+    tries=1;//set the tried number to one
+
+    srand(time (0));//Sets the seed for the random number
+
+ random = rand() % 20 + 1;//random number between 1-20
+
+ cout<<random<<"\n"; // This is for testing :)
+
+ cout << "Guess a number between 0-20\n";
+
+    cin >> i;// the players guess
+
+while (i != random) {// the while loop that repeats and repeats
+
+ cout << "Incorrect, try again.\n";// displays guess again
+
+    cin>>i;//Tells the player to guess again
+
+tries++;//Tries will increase by 1
+
+}
+if (i==random){
+
+    score=score + tries;// gets the score
+
+    cout<<"Correct!\n";//Displays when you get the number correct
+    cout<<"Score: "<<score<<""<<endl;
+    cout<<"Tries:  "<<tries<<"\n";//Displays the amount of times.
+
+
+}
+cout<<"1 if you want to play again\n"; //self explanatory
+cout<<"2 if you want to leave\n";
+cout<<"3 if you want to reset your data\n";
+
+
+cin>>y;
+
+        if (y == 2){
+        cout<<"LOSER";
+        return 0;}
+
+
+
+
+cin>>y; //If you say 1 the game will start again}
+
+    //while (r == 2){
+           // tries=1;
+           // score=1;
+//cin>>r;
+
+//}
+}
+return 0;
+
+}
+
+
