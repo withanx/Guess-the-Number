@@ -1,0 +1,17 @@
+import random #inports random module
+
+rn = random.randint(1, 100) #random numbers between 1 and 100
+tries = 0 #the tries start at zero
+
+while True: #while true,
+    guess = int(input("GUESS THE NUMBER: "))  # tells you to guess the number
+    tries += 1 #every time you try to guess the number, this goes up
+
+    if guess < rn: #if number you guess is less than the random number,
+        print("YOU GUESSED TOO LOW, TRY AGAIN") #it tells you this and it loops
+    elif guess > rn: #if number you guessed is more than the random number,
+        print("YOU GUESSED TOO HIGH, TRY AGAIN") #it tells you this and it loops
+    else: #if you guessed it correctly
+        print("Correct, Game over \n") #tells you game is over
+        print("It took you", tries, "tries to find it") #tells you how many tries
+        break  # exits the loop
